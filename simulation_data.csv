@@ -1,0 +1,24 @@
+process,count,mean(mins),triangular,percentage,distribution/type,Notes
+arrival_rate,,2160,,,poisson,1.5 days on average per stroke patient
+ICU_duration,,60,,,exponential,
+EMS_arrivals_percentage,,,,0.7,percentage,percentage of arrivals by EMS (not walk-in)
+EMS_screen_percentage,,,,0.83,percentage,
+triage_duration,,6,,,exponential,
+ED_eval_duration,,7.8,,,exponential,
+stroke_identified_percentage,,,,0.9,percentage,
+routine_care_duration,,90,,,exponential,
+CT_duration,,28.33,,,exponential,
+HS_percentage,,,,0.15,percentage,
+ambulance_arrival_duration,,20,,,exponential,
+telestroke_duration,,30,,,exponential,
+TPA_decision_percentage,,,,0.05,percentage,
+TPA_consent_percentage,,,,0.9,percentage,90% of patients consent
+TPA_long_consent_percentage,,,,0.9,percentage,90% of patients take longer to consent
+TPA_consent_duration,,30,,,exponential,duration of long consent
+TPA_mixing_duration,,,"10,12.5,15",,triangular,
+pharmacist_arrival_duration,,,"2.5,5,7.5",,triangular,
+CTA_decision_percentage,,,,0.47,percentage,
+CTA_duration,,40,,,exponential,
+transfer_decision_percentage,,,,0.15,percentage,
+num_stroke_patients,2000,,,,count,total number of stroke patients to be simulated (increments of 100)
+routine_care_capacity,10,,,,count,capacity/number of servers (beds/rooms) for routine care
