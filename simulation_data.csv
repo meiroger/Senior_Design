@@ -20,8 +20,8 @@ pharmacist_arrival_duration,,,"2.5,5,7.5",,triangular,
 CTA_decision_percentage,,,,0.47,percentage,
 CTA_duration,,40,,,exponential,
 transfer_decision_percentage,,,,0.15,percentage,
-early_send_1_percentage,,,,0.1,percentage,percent chance of sending early at early send node 1 (after stroke code activation)
-early_send_2_percentage,,,,0.1,percentage,percent chance of sending early at early send node 2 (after telestroke)
-early_send_3_percentage,,,,0.1,percentage,percent chance of sending early at early send node 3 (after TPA)
+early_send_1_percentage,,,,0,percentage,percent chance of sending early at early send node 1 (after stroke code activation)
+early_send_2_percentage,,,,0,percentage,percent chance of sending early at early send node 2 (after telestroke)
+early_send_3_percentage,,,,0,percentage,percent chance of sending early at early send node 3 (after TPA)
 num_stroke_patients,2000,,,,count,total number of stroke patients to be simulated (increments of 100)
-routine_care_capacity,10,,,,count,capacity/number of servers (beds/rooms) for routine care
+routine_care_capacity,100,,,,count,capacity/number of servers (beds/rooms) for routine care
