@@ -1,6 +1,5 @@
 process,count,mean(mins),triangular,percentage,distribution/type,Notes
 arrival_rate,,2160,,,poisson,1.5 days on average per stroke patient
-ICU_duration,,60,,,exponential,
 EMS_arrivals_percentage,,,,0.7,percentage,percentage of arrivals by EMS (not walk-in)
 EMS_screen_percentage,,,,0.83,percentage,
 triage_duration,,6,,,exponential,
