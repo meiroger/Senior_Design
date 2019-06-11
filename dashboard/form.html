@@ -1,1 +1,119 @@
-
+<html>
+    <header>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="styling.css"/>
+        <!--this is just a temp stylesheet below-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </header>
+    <body class = "body">
+        <div class = "right">
+            <div class='header'>
+                <h1>Stroke Assessment Based on the ROSIER Scale</h1>
+            </div> 
+            <!-- Time Inputs-->
+            <div class = "time-inputs">
+                <form>
+                    Current Date: <input type="date" name="cdate" value = "2019-01-01">
+                    Current Time: <input class = "time" type="time" id="ctime" data-format="HH:mm a" data-template="HH : mm a" value= "00:00">
+                </form>
+                <form>
+                    Date Symptoms Began: <input type="date" name="sdate" value = "2019-01-01">
+                    Time Symptoms Began: <input class = "time" type="time" id="stime" data-format="HH:mm a" data-template="HH : mm a" value= "00:00">
+                </form>
+            </div>
+            <!--GSC-->
+            <div class = "GSC">
+                <p class="bold">GCS (Glasgow Coma Scale):</p>
+                Test the patient’s best eye response:
+                <select id="eye-response" name="eye-response">
+                    <option value=4>Spontaneous (+4)</option>
+                    <option value=3>To Verbal Command (+3)</option>
+                    <option value=2>To Pain (+2)</option>
+                    <option value=1>No Eye Opening (+1)</option>
+                    <option value=0>Not Testable (0)</option>
+                </select>
+            </div>
+            <div class = "GSC">
+                Test the patient’s best verbal response:
+                <select id="verbal-response" name="verbal-response">
+                    <option value=5>Oriented (+5)</option>
+                    <option value=4>Confused (+4)</option>
+                    <option value=3>Inappropriate Words (+3)</option>
+                    <option value=2>Incomprehensible Sounds (+2)</option>
+                    <option value=1>No verbal response (+1)</option>
+                    <option value=0>Not Testable (0)</option>
+                </select>
+            </div>
+            <div class = "GSC">
+                Test the patient’s best motorized response:
+                <select id="motorized-response" name="motorized-response">
+                    <option value=6>Obeys Commands (+6)</option>
+                    <option value=5>Localizes Pain (+5)</option>
+                    <option value=4>Withdrawal from Pain (+4)</option>
+                    <option value=3>Flexion to Pain (+3)</option>
+                    <option value=2>Extension to Pain (+2)</option>
+                    <option value=1>No motor response (+1)</option>
+                    <option value=0>Not Testable (0)</option>
+                </select>
+            </div>
+            <!--Blood Inputs-->
+            <div class = "blood">  
+                <p class="bold">Blood:</p> 
+                <form> 
+                    What is the patient’s blood pressure?
+                    <input autocomplete="off" type="number" maxlength="3" id="systolicInput" placeholder="120"> 
+                    /
+                    <input autocomplete="off" type="number" maxlength="3" id="diastolicInput" placeholder="80"> 
+                    mmgHG
+                </form>
+                <form>
+                    What is the patient’s blood sugar level?
+                    <input autocomplete="off" type="number" maxlength="3" id="bloodsugar" placeholder="3.5"> 
+                    mmol/l
+                </form>
+            </div>
+            <!--Stroke Assessment-->
+            <div class = "stroke">
+                <p class="bold">Stroke Assessment:</p>
+                Has there been loss of consciousness or syncope?
+                <input type="radio" name="r1" value="-1" id="r1">Yes</input>
+                <input type="radio" name="r1" value="0" id="r1" checked="checked">No</input>
+            </div>
+            <div class = "stroke">
+                Has there been seizure activity?
+                <input type="radio" name="r2" value="-1" id="r2">Yes</input>
+                <input type="radio" name="r2" value="0" id="r2" checked="checked">No</input>
+            </div>
+            <p id="acute-onset">Is there a new acute onset of:</p>
+            <div class = "stroke">
+                Asymmetric Facial Weakness (Have patient smile)
+                <input type="radio" name="r3" value="1" id="r3">Yes</input>
+                <input type="radio" name="r3" value="0" id="r3" checked="checked">No</input>
+            </div>
+            <div class = "stroke">
+                Asymmetric Arm Weakness (Have patient close eyes and extend arms for 10 secs)
+                <input type="radio" name="r4" value="1" id="r4">Yes</input>
+                <input type="radio" name="r4" value="0" id="r4" checked="checked">No</input>
+            </div>
+            <div class = "stroke">
+                Asymmetric Leg Weakness (Have patient stand)
+                <input type="radio" name="r5" value="1" id="r5">Yes</input>
+                <input type="radio" name="r5" value="0" id="r5" checked="checked">No</input>
+            </div>
+            <div class = "stroke">
+                Speech Disturbance (Have patient say, “You can’t teach an old dog new tricks”)
+                <input type="radio" name="r6" value="1" id="r6">Yes</input>
+                <input type="radio" name="r6" value="0" id="r6" checked="checked">No</input>
+            </div>
+            <div class = "stroke">
+                Visual Field Defect (Have patient follow your moving finger)
+                <input type="radio" name="r7" value="1" id="r7">Yes</input>
+                <input type="radio" name="r7" value="0" id="r7" checked="checked">No</input>
+            </div>
+            <!-- Evaluate Button -->
+            <button onclick="ev()">Evaluate</button>
+        </div>
+        <div id = "results"></div>
+        <script src="evaluate.js"></script>
+    </body>
+</html>

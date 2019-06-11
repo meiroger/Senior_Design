@@ -1,0 +1,38 @@
+.right{
+    text-align: right;
+    float: right;
+    width: 70%;
+    padding-right: 20px;
+}
+
+.bold{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#acute-onset{
+    position: relative;
+    right: 20%;
+    text-decoration: underline;
+}
+
+#bloodsugar{
+    margin: 0px;
+    padding: 0px;
+}
+
+.button{
+    padding: 10px;
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+
+#results{
+    width: 25%;
+    float: left;
+    text-align: left;
+    position: relative;
+    top: 20%;
+}
